@@ -67,7 +67,7 @@
 		.box5 {
 			width: 400px;
 			height: 250px;
-			background-image: url(kukabar.png);
+			background-image: url(kukabar.jpg);
 			background-size: 100% 100%;
 			border-radius: 40px;
 			position: absolute;
@@ -138,7 +138,7 @@
 		.box5_1 {
 			width: 400px;
 			height: 250px;
-			background-image: url(kukabar.png);
+			background-image: url(kukabar.jpg);
 			background-size: 100% 100%;
 			border-radius: 40px;
 			position: absolute;
@@ -234,7 +234,7 @@
 				document.querySelector(".box3").style.backgroundSize = "100% 100%"
 				document.querySelector(".box4").style.background = "url(kvokka.jpg)"
 				document.querySelector(".box4").style.backgroundSize = "100% 100%"
-				document.querySelector(".box5").style.background = "url(kukabar.png)"
+				document.querySelector(".box5").style.background = "url(kukabar.jpg)"
 				document.querySelector(".box5").style.backgroundSize = "100% 100%"
 				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
 				document.querySelector(".box0").style.background = "none"
@@ -265,7 +265,7 @@
 				document.querySelector(".box3").style.backgroundSize = "100% 100%"
 				document.querySelector(".box4").style.background = "url(kvokka.jpg)"
 				document.querySelector(".box4").style.backgroundSize = "100% 100%"
-				document.querySelector(".box5").style.background = "url(kukabar.png)"
+				document.querySelector(".box5").style.background = "url(kukabar.jpg)"
 				document.querySelector(".box5").style.backgroundSize = "100% 100%"
 				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
 				document.querySelector(".box0").style.background = "none"
@@ -296,7 +296,7 @@
 				document.querySelector(".box3").style.backgroundSize = "100% 100%"
 				document.querySelector(".box4").style.background = "url(kvokka.jpg)"
 				document.querySelector(".box4").style.backgroundSize = "100% 100%"
-				document.querySelector(".box5").style.background = "url(kukabar.png)"
+				document.querySelector(".box5").style.background = "url(kukabar.jpg)"
 				document.querySelector(".box5").style.backgroundSize = "100% 100%"
 				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
 				document.querySelector(".box0").style.background = "none"
@@ -319,15 +319,13 @@
 				document.querySelector(".box3").style.backgroundSize = "100% 100%"
 				document.querySelector(".box4").style.background = "url(kvokka.jpg)"
 				document.querySelector(".box4").style.backgroundSize = "100% 100%"
-				document.querySelector(".box5").style.background = "url(kukabar.png)"
+				document.querySelector(".box5").style.background = "url(kukabar.jpg)"
 				document.querySelector(".box5").style.backgroundSize = "100% 100%"
 				
 
 			alert("Молодец! Преступай к следующему раунду.");
 				popitki = 3;
 				document.querySelector(".popitki").innerHTML = popitki;
-				document.querySelector(".btn2").style.display = "block";
-				document.querySelector(".btn2").style.marginLeft = "46.5%";
 				document.querySelector(".box0").style.display = "none"
 				document.querySelector(".box1").style.display = "none"
 				document.querySelector(".box2").style.display = "none"
@@ -346,113 +344,10 @@
 				document.querySelector(".box3_1").style.background = "black"
 				document.querySelector(".box4_1").style.background = "black"
 				document.querySelector(".box5_1").style.background = "black"
-				
-					
-		}
+				document.querySelector(".h_1").style.display = "none"
+				document.querySelector(".h_2").style.display = "block"
 
-		document.querySelector(".box4").onclick = function(){
-			document.querySelector(".box4").style.background = "url(kvokka.jpg)"
-			document.querySelector(".box4").style.backgroundSize = "100% 100%"
-			popitki = popitki - 1;
-			document.querySelector(".popitki").innerHTML = popitki;
-			if(popitki > 0){
-				alert("Неверно! Попрощайся с попыткой.")
-			}
-			if(popitki == 0){
-				document.querySelector(".box0").style.background = "url(dolgopyat.jpg)"
-				document.querySelector(".box0").style.backgroundSize = "100% 100%"
-				document.querySelector(".box1").style.background = "url(fennec.jpg)"
-				document.querySelector(".box1").style.backgroundSize = "100% 100%"
-				document.querySelector(".box2").style.background = "url(fox.jpg)"
-				document.querySelector(".box2").style.backgroundSize = "100% 100%"
-				document.querySelector(".box3").style.background = "url(mpanda.jpg)"
-				document.querySelector(".box3").style.backgroundSize = "100% 100%"
-				document.querySelector(".box4").style.background = "url(kvokka.jpg)"
-				document.querySelector(".box4").style.backgroundSize = "100% 100%"
-				document.querySelector(".box5").style.background = "url(kukabar.png)"
-				document.querySelector(".box5").style.backgroundSize = "100% 100%"
-				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
-				document.querySelector(".box0").style.background = "none"
-				document.querySelector(".box1").style.background = "none"
-				document.querySelector(".box2").style.background = "none"
-				document.querySelector(".box3").style.background = "none"
-				document.querySelector(".box4").style.background = "none"
-				document.querySelector(".box5").style.background = "none"
-			}
-		}
-
-		document.querySelector(".box5").onclick = function(){
-			document.querySelector(".box5").style.background = "url(kukabar.png)"
-			document.querySelector(".box5").style.backgroundSize = "100% 100%"
-			popitki = popitki - 1;
-			document.querySelector(".popitki").innerHTML = popitki;
-			if(popitki > 0){
-				alert("Неверно! Попрощайся с попыткой.")
-			}
-			if(popitki == 0){
-				document.querySelector(".box0").style.background = "url(dolgopyat.jpg)"
-				document.querySelector(".box0").style.backgroundSize = "100% 100%"
-				document.querySelector(".box1").style.background = "url(fennec.jpg)"
-				document.querySelector(".box1").style.backgroundSize = "100% 100%"
-				document.querySelector(".box2").style.background = "url(fox.jpg)"
-				document.querySelector(".box2").style.backgroundSize = "100% 100%"
-				document.querySelector(".box3").style.background = "url(mpanda.jpg)"
-				document.querySelector(".box3").style.backgroundSize = "100% 100%"
-				document.querySelector(".box4").style.background = "url(kvokka.jpg)"
-				document.querySelector(".box4").style.backgroundSize = "100% 100%"
-				document.querySelector(".box5").style.background = "url(kukabar.png)"
-				document.querySelector(".box5").style.backgroundSize = "100% 100%"
-				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
-				document.querySelector(".box0").style.background = "none"
-				document.querySelector(".box1").style.background = "none"
-				document.querySelector(".box2").style.background = "none"
-				document.querySelector(".box3").style.background = "none"
-				document.querySelector(".box4").style.background = "none"
-				document.querySelector(".box5").style.background = "none"
-			}
-		}
-
-
-
-
-
-
-
-		document.querySelector(".btn2").onclick = function(){
-			document.querySelector(".h_1").style.display = "none"
-			document.querySelector(".h_2").style.display = "block"
-			document.querySelector(".btn2").style.display = "none"
-
-			document.querySelector(".box5_1").style.transition = "2s"
-			document.querySelector(".box1_1").style.transition = "2s"
-			document.querySelector(".box2_1").style.transition = "2s"
-			document.querySelector(".box3_1").style.transition = "2s"
-			document.querySelector(".box0_1").style.transition = "2s"
-			document.querySelector(".box4_1").style.transition = "2s"
-
-			document.querySelector(".box0_1").style.left = "40%"
-			document.querySelector(".box0_1").style.top = "5%"
-
-			document.querySelector(".box1_1").style.left = "65%"
-			document.querySelector(".box1_1").style.top = "60%"
-
-			document.querySelector(".box2_1").style.left = "40%"
-			document.querySelector(".box2_1").style.top = "60%"
-
-			document.querySelector(".box3_1").style.left = "65%"
-			document.querySelector(".box3_1").style.top = "5%"
-
-			document.querySelector(".box4_1").style.left = "15%"
-			document.querySelector(".box4_1").style.top = "5%"
-
-
-			document.querySelector(".box5_1").style.left = "15%"
-			document.querySelector(".box5_1").style.top = "60%"
-
-
-		}
-
-		document.querySelector(".box0_1").onclick = function(){
+			document.querySelector(".box0_1").onclick = function(){
 			document.querySelector(".box0_1").style.background = "url(dolgopyat.jpg)"
 			document.querySelector(".box0_1").style.backgroundSize = "100% 100%"
 			popitki = popitki - 1;
@@ -471,7 +366,7 @@
 				document.querySelector(".box3_1").style.backgroundSize = "100% 100%"
 				document.querySelector(".box4_1").style.background = "url(kvokka.jpg)"
 				document.querySelector(".box4_1").style.backgroundSize = "100% 100%"
-				document.querySelector(".box5_1").style.background = "url(kukabar.png)"
+				document.querySelector(".box5_1").style.background = "url(kukabar.jpg)"
 				document.querySelector(".box5_1").style.backgroundSize = "100% 100%"
 				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
 				document.querySelector(".box0_1").style.background = "none"
@@ -502,7 +397,7 @@
 				document.querySelector(".box3_1").style.backgroundSize = "100% 100%"
 				document.querySelector(".box4_1").style.background = "url(kvokka.jpg)"
 				document.querySelector(".box4_1").style.backgroundSize = "100% 100%"
-				document.querySelector(".box5_1").style.background = "url(kukabar.png)"
+				document.querySelector(".box5_1").style.background = "url(kukabar.jpg)"
 				document.querySelector(".box5_1").style.backgroundSize = "100% 100%"
 				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
 				document.querySelector(".box0_1").style.background = "none"
@@ -533,7 +428,7 @@
 				document.querySelector(".box3_1").style.backgroundSize = "100% 100%"
 				document.querySelector(".box4_1").style.background = "url(kvokka.jpg)"
 				document.querySelector(".box4_1").style.backgroundSize = "100% 100%"
-				document.querySelector(".box5_1").style.background = "url(kukabar.png)"
+				document.querySelector(".box5_1").style.background = "url(kukabar.jpg)"
 				document.querySelector(".box5_1").style.backgroundSize = "100% 100%"
 				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
 				document.querySelector(".box0_1").style.background = "none"
@@ -564,7 +459,7 @@
 				document.querySelector(".box3_1").style.backgroundSize = "100% 100%"
 				document.querySelector(".box4_1").style.background = "url(kvokka.jpg)"
 				document.querySelector(".box4_1").style.backgroundSize = "100% 100%"
-				document.querySelector(".box5_1").style.background = "url(kukabar.png)"
+				document.querySelector(".box5_1").style.background = "url(kukabar.jpg)"
 				document.querySelector(".box5_1").style.backgroundSize = "100% 100%"
 				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
 				document.querySelector(".box0_1").style.background = "none"
@@ -595,7 +490,7 @@
 				document.querySelector(".box3_1").style.backgroundSize = "100% 100%"
 				document.querySelector(".box4_1").style.background = "url(kvokka.jpg)"
 				document.querySelector(".box4_1").style.backgroundSize = "100% 100%"
-				document.querySelector(".box5_1").style.background = "url(kukabar.png)"
+				document.querySelector(".box5_1").style.background = "url(kukabar.jpg)"
 				document.querySelector(".box5_1").style.backgroundSize = "100% 100%"
 				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
 				document.querySelector(".box0_1").style.background = "none"
@@ -626,7 +521,7 @@
 				document.querySelector(".box3_1").style.backgroundSize = "100% 100%"
 				document.querySelector(".box4_1").style.background = "url(kvokka.jpg)"
 				document.querySelector(".box4_1").style.backgroundSize = "100% 100%"
-				document.querySelector(".box5_1").style.background = "url(kukabar.png)"
+				document.querySelector(".box5_1").style.background = "url(kukabar.jpg)"
 				document.querySelector(".box5_1").style.backgroundSize = "100% 100%"
 				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
 				document.querySelector(".box0_1").style.background = "none"
@@ -639,7 +534,7 @@
 		}
 
 		document.querySelector(".box5_1").onclick = function(){
-			document.querySelector(".box5_1").style.background = "url(kukabar.png)"
+			document.querySelector(".box5_1").style.background = "url(kukabar.jpg)"
 			document.querySelector(".box5_1").style.backgroundSize = "100% 100%"
 			popitki = 2020;
 			document.querySelector(".popitki").innerHTML = popitki;
@@ -654,7 +549,7 @@
 			document.querySelector(".box3_1").style.backgroundSize = "100% 100%"
 			document.querySelector(".box4_1").style.background = "url(kvokka.jpg)"
 			document.querySelector(".box4_1").style.backgroundSize = "100% 100%"
-			document.querySelector(".box5_1").style.background = "url(kukabar.png)"
+			document.querySelector(".box5_1").style.background = "url(kukabar.jpg)"
 			document.querySelector(".box5_1").style.backgroundSize = "100% 100%"
 			document.querySelector(".inst").style.display = "block"
 			document.querySelector(".inst").style.marginLeft = "47%"
@@ -663,6 +558,81 @@
 
 
 		}
+				
+					
+		}
+
+		document.querySelector(".box4").onclick = function(){
+			document.querySelector(".box4").style.background = "url(kvokka.jpg)"
+			document.querySelector(".box4").style.backgroundSize = "100% 100%"
+			popitki = popitki - 1;
+			document.querySelector(".popitki").innerHTML = popitki;
+			if(popitki > 0){
+				alert("Неверно! Попрощайся с попыткой.")
+			}
+			if(popitki == 0){
+				document.querySelector(".box0").style.background = "url(dolgopyat.jpg)"
+				document.querySelector(".box0").style.backgroundSize = "100% 100%"
+				document.querySelector(".box1").style.background = "url(fennec.jpg)"
+				document.querySelector(".box1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box2").style.background = "url(fox.jpg)"
+				document.querySelector(".box2").style.backgroundSize = "100% 100%"
+				document.querySelector(".box3").style.background = "url(mpanda.jpg)"
+				document.querySelector(".box3").style.backgroundSize = "100% 100%"
+				document.querySelector(".box4").style.background = "url(kvokka.jpg)"
+				document.querySelector(".box4").style.backgroundSize = "100% 100%"
+				document.querySelector(".box5").style.background = "url(kukabar.jpg)"
+				document.querySelector(".box5").style.backgroundSize = "100% 100%"
+				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
+				document.querySelector(".box0").style.background = "none"
+				document.querySelector(".box1").style.background = "none"
+				document.querySelector(".box2").style.background = "none"
+				document.querySelector(".box3").style.background = "none"
+				document.querySelector(".box4").style.background = "none"
+				document.querySelector(".box5").style.background = "none"
+			}
+		}
+
+		document.querySelector(".box5").onclick = function(){
+			document.querySelector(".box5").style.background = "url(kukabar.jpg)"
+			document.querySelector(".box5").style.backgroundSize = "100% 100%"
+			popitki = popitki - 1;
+			document.querySelector(".popitki").innerHTML = popitki;
+			if(popitki > 0){
+				alert("Неверно! Попрощайся с попыткой.")
+			}
+			if(popitki == 0){
+				document.querySelector(".box0").style.background = "url(dolgopyat.jpg)"
+				document.querySelector(".box0").style.backgroundSize = "100% 100%"
+				document.querySelector(".box1").style.background = "url(fennec.jpg)"
+				document.querySelector(".box1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box2").style.background = "url(fox.jpg)"
+				document.querySelector(".box2").style.backgroundSize = "100% 100%"
+				document.querySelector(".box3").style.background = "url(mpanda.jpg)"
+				document.querySelector(".box3").style.backgroundSize = "100% 100%"
+				document.querySelector(".box4").style.background = "url(kvokka.jpg)"
+				document.querySelector(".box4").style.backgroundSize = "100% 100%"
+				document.querySelector(".box5").style.background = "url(kukabar.jpg)"
+				document.querySelector(".box5").style.backgroundSize = "100% 100%"
+				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
+				document.querySelector(".box0").style.background = "none"
+				document.querySelector(".box1").style.background = "none"
+				document.querySelector(".box2").style.background = "none"
+				document.querySelector(".box3").style.background = "none"
+				document.querySelector(".box4").style.background = "none"
+				document.querySelector(".box5").style.background = "none"
+			}
+		}
+
+
+
+
+
+
+
+	
+
+		
 			
 	</script>
 
