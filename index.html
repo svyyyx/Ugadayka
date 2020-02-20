@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Угадайка</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style type="text/css">
+		@font-face {
+    	font-family: gang; /* Имя шрифта */
+    	src: url(12489.ttf);
+    	}	
+
+		.box0 {
+			width: 400px;
+			height: 250px;
+			background-image: url(dolgopyat.jpg);
+			background-size: 100% 100%;
+			border-radius: 40px;
+			position: absolute;
+			left: 15%;
+			top: 5%;
+		}
+
+		.box1 {
+			width: 400px;
+			height: 250px;
+			background-image: url(fennec.jpg);
+			background-size: 100% 100%;
+			border-radius: 40px;
+			position: absolute;
+			left: 40%;
+			top: 5%;
+		}
+
+		.box2 {
+			width: 400px;
+			height: 250px;
+			background-image: url(fox.jpg);
+			background-size: 100% 100%;
+			border-radius: 40px;
+			position: absolute;
+			left: 65%;
+			top: 5%;
+		}
+
+		.box3 {
+			width: 400px;
+			height: 250px;
+			background-image: url(mpanda.jpg);
+			background-size: 100% 100%;
+			border-radius: 40px;
+			position: absolute;
+			left: 15%;
+			top: 60%;
+		}
+
+		.box4 {
+			width: 400px;
+			height: 250px;
+			background-image: url(kvokka.jpg);
+			background-size: 100% 100%;
+			border-radius: 40px;
+			position: absolute;
+			left: 40%;
+			top: 60%;
+		}
+
+		.box5 {
+			width: 400px;
+			height: 250px;
+			background-image: url(kukabar.png);
+			background-size: 100% 100%;
+			border-radius: 40px;
+			position: absolute;
+			left: 65%;
+			top: 60%;
+		}
+
+		.box0_1 {
+			width: 400px;
+			height: 250px;
+			background-image: url(dolgopyat.jpg);
+			background-size: 100% 100%;
+			border-radius: 40px;
+			position: absolute;
+			left: 15%;
+			top: 5%;
+			display: none;
+		}
+
+		.box1_1 {
+			width: 400px;
+			height: 250px;
+			background-image: url(fennec.jpg);
+			background-size: 100% 100%;
+			border-radius: 40px;
+			position: absolute;
+			left: 40%;
+			top: 5%;
+			display: none;
+		}
+
+		.box2_1 {
+			width: 400px;
+			height: 250px;
+			background-image: url(fox.jpg);
+			background-size: 100% 100%;
+			border-radius: 40px;
+			position: absolute;
+			left: 65%;
+			top: 5%;
+			display: none;
+		}
+
+		.box3_1 {
+			width: 400px;
+			height: 250px;
+			background-image: url(mpanda.jpg);
+			background-size: 100% 100%;
+			border-radius: 40px;
+			position: absolute;
+			left: 15%;
+			top: 60%;
+			display: none;
+		}
+
+		.box4_1 {
+			width: 400px;
+			height: 250px;
+			background-image: url(kvokka.jpg);
+			background-size: 100% 100%;
+			border-radius: 40px;
+			position: absolute;
+			left: 40%;
+			top: 60%;
+			display: none;
+		}
+
+		.box5_1 {
+			width: 400px;
+			height: 250px;
+			background-image: url(kukabar.png);
+			background-size: 100% 100%;
+			border-radius: 40px;
+			position: absolute;
+			left: 65%;
+			top: 60%;
+			display: none;
+		}
+
+
+		H1{
+			color: purple;
+			font-family: gang;
+
+		}
+
+		SPAN{
+			color: purple;
+			font-family: gang;
+			font-size: 300%;
+			-webkit-filter: drop-shadow(0 0 3px rgba(106, 0, 255,1));
+    		filter: drop-shadow(0 0 6px rgba(106, 0, 255,1));
+		}
+
+		.btn {
+			background: linear-gradient(to top left, powderblue, purple);
+			border-radius: 10px;
+			font-family: gang;
+			border:none;
+			margin-bottom: 15px;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="col-12 text-center pb-4 pt-2" style="background: linear-gradient(to top left, powderblue, pink);">
+		<h1>Осталось попыток</h1>
+		<span class="popitki"></span>
+		<h1 class="h_1">Найди Малую Панду<i class="fa fa-paw"></i></h1>
+		<h1 class="h_2" style="display: none;">Найди Кукабара Птичку<i class="fa fa-paw"></i></h1>
+		<h1 class="h_3" style="display: none;">Поздравляю! Ты прошел угадайку!<i class="fa fa-paw"></i></h1>
+		<button class="btn1 btn">Спрятать</button>
+		<button style="display: none;" class="btn2 btn">След. Раунд</button>
+		<button style="display: none;" href="https://www.instagram.com/svyyyx/" class="inst btn"><a style="text-decoration: none;" href="https://www.instagram.com/svyyyx/">Instagram</a></button>
+
+		<div style="height: 699px;border: 2px solid purple;border-radius: 40px" class="col-12">
+			<div class="box0"></div>
+			<div class="box1"></div>
+			<div class="box2"></div>
+			<div class="box3"></div>
+			<div class="box4"></div>
+			<div class="box5"></div>
+			<div class="box0_1"></div>
+			<div class="box1_1"></div>
+			<div class="box2_1"></div>
+			<div class="box3_1"></div>
+			<div class="box4_1"></div>
+			<div class="box5_1"></div>
+
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		let popitki = 3;
+		document.querySelector(".popitki").innerHTML = popitki;
+
+		document.querySelector(".btn1").onclick = function(){
+			document.querySelector(".box0").style.background = "black"
+			document.querySelector(".box1").style.background = "black"
+			document.querySelector(".box2").style.background = "black"
+			document.querySelector(".box3").style.background = "black"
+			document.querySelector(".box4").style.background = "black"
+			document.querySelector(".box5").style.background = "black"
+			document.querySelector(".btn1").style.display = "none"
+
+		}
+
+		document.querySelector(".box0").onclick = function(){
+			document.querySelector(".box0").style.background = "url(dolgopyat.jpg)"
+			document.querySelector(".box0").style.backgroundSize = "100% 100%"
+			popitki = popitki - 1;
+			document.querySelector(".popitki").innerHTML = popitki;
+			if(popitki > 0){
+				alert("Неверно! Попрощайся с попыткой.")
+			}
+			if(popitki == 0){
+				document.querySelector(".box0").style.background = "url(dolgopyat.jpg)"
+				document.querySelector(".box0").style.backgroundSize = "100% 100%"
+				document.querySelector(".box1").style.background = "url(fennec.jpg)"
+				document.querySelector(".box1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box2").style.background = "url(fox.jpg)"
+				document.querySelector(".box2").style.backgroundSize = "100% 100%"
+				document.querySelector(".box3").style.background = "url(mpanda.jpg)"
+				document.querySelector(".box3").style.backgroundSize = "100% 100%"
+				document.querySelector(".box4").style.background = "url(kvokka.jpg)"
+				document.querySelector(".box4").style.backgroundSize = "100% 100%"
+				document.querySelector(".box5").style.background = "url(kukabar.png)"
+				document.querySelector(".box5").style.backgroundSize = "100% 100%"
+				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
+				document.querySelector(".box0").style.background = "none"
+				document.querySelector(".box1").style.background = "none"
+				document.querySelector(".box2").style.background = "none"
+				document.querySelector(".box3").style.background = "none"
+				document.querySelector(".box4").style.background = "none"
+				document.querySelector(".box5").style.background = "none"
+			}
+		}
+
+		document.querySelector(".box1").onclick = function(){
+			document.querySelector(".box1").style.background = "url(fennec.jpg)"
+			document.querySelector(".box1").style.backgroundSize = "100% 100%"
+			popitki = popitki - 1;
+			document.querySelector(".popitki").innerHTML = popitki;
+			if(popitki > 0){
+				alert("Неверно! Попрощайся с попыткой.")
+			}
+			if(popitki == 0){
+				document.querySelector(".box0").style.background = "url(dolgopyat.jpg)"
+				document.querySelector(".box0").style.backgroundSize = "100% 100%"
+				document.querySelector(".box1").style.background = "url(fennec.jpg)"
+				document.querySelector(".box1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box2").style.background = "url(fox.jpg)"
+				document.querySelector(".box2").style.backgroundSize = "100% 100%"
+				document.querySelector(".box3").style.background = "url(mpanda.jpg)"
+				document.querySelector(".box3").style.backgroundSize = "100% 100%"
+				document.querySelector(".box4").style.background = "url(kvokka.jpg)"
+				document.querySelector(".box4").style.backgroundSize = "100% 100%"
+				document.querySelector(".box5").style.background = "url(kukabar.png)"
+				document.querySelector(".box5").style.backgroundSize = "100% 100%"
+				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
+				document.querySelector(".box0").style.background = "none"
+				document.querySelector(".box1").style.background = "none"
+				document.querySelector(".box2").style.background = "none"
+				document.querySelector(".box3").style.background = "none"
+				document.querySelector(".box4").style.background = "none"
+				document.querySelector(".box5").style.background = "none"
+			}
+		}
+
+		document.querySelector(".box2").onclick = function(){
+			document.querySelector(".box2").style.background = "url(fox.jpg)"
+			document.querySelector(".box2").style.backgroundSize = "100% 100%"
+			popitki = popitki - 1;
+			document.querySelector(".popitki").innerHTML = popitki;
+			if(popitki > 0){
+				alert("Неверно! Попрощайся с попыткой.")
+			}
+			if(popitki == 0){
+				document.querySelector(".box0").style.background = "url(dolgopyat.jpg)"
+				document.querySelector(".box0").style.backgroundSize = "100% 100%"
+				document.querySelector(".box1").style.background = "url(fennec.jpg)"
+				document.querySelector(".box1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box2").style.background = "url(fox.jpg)"
+				document.querySelector(".box2").style.backgroundSize = "100% 100%"
+				document.querySelector(".box3").style.background = "url(mpanda.jpg)"
+				document.querySelector(".box3").style.backgroundSize = "100% 100%"
+				document.querySelector(".box4").style.background = "url(kvokka.jpg)"
+				document.querySelector(".box4").style.backgroundSize = "100% 100%"
+				document.querySelector(".box5").style.background = "url(kukabar.png)"
+				document.querySelector(".box5").style.backgroundSize = "100% 100%"
+				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
+				document.querySelector(".box0").style.background = "none"
+				document.querySelector(".box1").style.background = "none"
+				document.querySelector(".box2").style.background = "none"
+				document.querySelector(".box3").style.background = "none"
+				document.querySelector(".box4").style.background = "none"
+				document.querySelector(".box5").style.background = "none"
+			}
+		}
+
+		document.querySelector(".box3").onclick = function(){
+				document.querySelector(".box0").style.background = "url(dolgopyat.jpg)"
+				document.querySelector(".box0").style.backgroundSize = "100% 100%"
+				document.querySelector(".box1").style.background = "url(fennec.jpg)"
+				document.querySelector(".box1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box2").style.background = "url(fox.jpg)"
+				document.querySelector(".box2").style.backgroundSize = "100% 100%"
+				document.querySelector(".box3").style.background = "url(mpanda.jpg)"
+				document.querySelector(".box3").style.backgroundSize = "100% 100%"
+				document.querySelector(".box4").style.background = "url(kvokka.jpg)"
+				document.querySelector(".box4").style.backgroundSize = "100% 100%"
+				document.querySelector(".box5").style.background = "url(kukabar.png)"
+				document.querySelector(".box5").style.backgroundSize = "100% 100%"
+				
+
+			alert("Молодец! Преступай к следующему раунду.");
+				popitki = 3;
+				document.querySelector(".popitki").innerHTML = popitki;
+				document.querySelector(".btn2").style.display = "block";
+				document.querySelector(".btn2").style.marginLeft = "46.5%";
+				document.querySelector(".box0").style.display = "none"
+				document.querySelector(".box1").style.display = "none"
+				document.querySelector(".box2").style.display = "none"
+				document.querySelector(".box3").style.display = "none"
+				document.querySelector(".box4").style.display = "none"
+				document.querySelector(".box5").style.display = "none"
+				document.querySelector(".box0_1").style.display = "block"
+				document.querySelector(".box1_1").style.display = "block"
+				document.querySelector(".box2_1").style.display = "block"
+				document.querySelector(".box3_1").style.display = "block"
+				document.querySelector(".box4_1").style.display = "block"
+				document.querySelector(".box5_1").style.display = "block"
+				document.querySelector(".box0_1").style.background = "black"
+				document.querySelector(".box1_1").style.background = "black"
+				document.querySelector(".box2_1").style.background = "black"
+				document.querySelector(".box3_1").style.background = "black"
+				document.querySelector(".box4_1").style.background = "black"
+				document.querySelector(".box5_1").style.background = "black"
+				
+					
+		}
+
+		document.querySelector(".box4").onclick = function(){
+			document.querySelector(".box4").style.background = "url(kvokka.jpg)"
+			document.querySelector(".box4").style.backgroundSize = "100% 100%"
+			popitki = popitki - 1;
+			document.querySelector(".popitki").innerHTML = popitki;
+			if(popitki > 0){
+				alert("Неверно! Попрощайся с попыткой.")
+			}
+			if(popitki == 0){
+				document.querySelector(".box0").style.background = "url(dolgopyat.jpg)"
+				document.querySelector(".box0").style.backgroundSize = "100% 100%"
+				document.querySelector(".box1").style.background = "url(fennec.jpg)"
+				document.querySelector(".box1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box2").style.background = "url(fox.jpg)"
+				document.querySelector(".box2").style.backgroundSize = "100% 100%"
+				document.querySelector(".box3").style.background = "url(mpanda.jpg)"
+				document.querySelector(".box3").style.backgroundSize = "100% 100%"
+				document.querySelector(".box4").style.background = "url(kvokka.jpg)"
+				document.querySelector(".box4").style.backgroundSize = "100% 100%"
+				document.querySelector(".box5").style.background = "url(kukabar.png)"
+				document.querySelector(".box5").style.backgroundSize = "100% 100%"
+				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
+				document.querySelector(".box0").style.background = "none"
+				document.querySelector(".box1").style.background = "none"
+				document.querySelector(".box2").style.background = "none"
+				document.querySelector(".box3").style.background = "none"
+				document.querySelector(".box4").style.background = "none"
+				document.querySelector(".box5").style.background = "none"
+			}
+		}
+
+		document.querySelector(".box5").onclick = function(){
+			document.querySelector(".box5").style.background = "url(kukabar.png)"
+			document.querySelector(".box5").style.backgroundSize = "100% 100%"
+			popitki = popitki - 1;
+			document.querySelector(".popitki").innerHTML = popitki;
+			if(popitki > 0){
+				alert("Неверно! Попрощайся с попыткой.")
+			}
+			if(popitki == 0){
+				document.querySelector(".box0").style.background = "url(dolgopyat.jpg)"
+				document.querySelector(".box0").style.backgroundSize = "100% 100%"
+				document.querySelector(".box1").style.background = "url(fennec.jpg)"
+				document.querySelector(".box1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box2").style.background = "url(fox.jpg)"
+				document.querySelector(".box2").style.backgroundSize = "100% 100%"
+				document.querySelector(".box3").style.background = "url(mpanda.jpg)"
+				document.querySelector(".box3").style.backgroundSize = "100% 100%"
+				document.querySelector(".box4").style.background = "url(kvokka.jpg)"
+				document.querySelector(".box4").style.backgroundSize = "100% 100%"
+				document.querySelector(".box5").style.background = "url(kukabar.png)"
+				document.querySelector(".box5").style.backgroundSize = "100% 100%"
+				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
+				document.querySelector(".box0").style.background = "none"
+				document.querySelector(".box1").style.background = "none"
+				document.querySelector(".box2").style.background = "none"
+				document.querySelector(".box3").style.background = "none"
+				document.querySelector(".box4").style.background = "none"
+				document.querySelector(".box5").style.background = "none"
+			}
+		}
+
+
+
+
+
+
+
+		document.querySelector(".btn2").onclick = function(){
+			document.querySelector(".h_1").style.display = "none"
+			document.querySelector(".h_2").style.display = "block"
+			document.querySelector(".btn2").style.display = "none"
+
+			document.querySelector(".box5_1").style.transition = "2s"
+			document.querySelector(".box1_1").style.transition = "2s"
+			document.querySelector(".box2_1").style.transition = "2s"
+			document.querySelector(".box3_1").style.transition = "2s"
+			document.querySelector(".box0_1").style.transition = "2s"
+			document.querySelector(".box4_1").style.transition = "2s"
+
+			document.querySelector(".box0_1").style.left = "40%"
+			document.querySelector(".box0_1").style.top = "5%"
+
+			document.querySelector(".box1_1").style.left = "65%"
+			document.querySelector(".box1_1").style.top = "60%"
+
+			document.querySelector(".box2_1").style.left = "40%"
+			document.querySelector(".box2_1").style.top = "60%"
+
+			document.querySelector(".box3_1").style.left = "65%"
+			document.querySelector(".box3_1").style.top = "5%"
+
+			document.querySelector(".box4_1").style.left = "15%"
+			document.querySelector(".box4_1").style.top = "5%"
+
+
+			document.querySelector(".box5_1").style.left = "15%"
+			document.querySelector(".box5_1").style.top = "60%"
+
+
+		}
+
+		document.querySelector(".box0_1").onclick = function(){
+			document.querySelector(".box0_1").style.background = "url(dolgopyat.jpg)"
+			document.querySelector(".box0_1").style.backgroundSize = "100% 100%"
+			popitki = popitki - 1;
+			document.querySelector(".popitki").innerHTML = popitki;
+			if(popitki > 0){
+				alert("Неверно! Попрощайся с попыткой.")
+			}
+			if(popitki == 0){
+				document.querySelector(".box0_1").style.background = "url(dolgopyat.jpg)"
+				document.querySelector(".box0_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box1_1").style.background = "url(fennec.jpg)"
+				document.querySelector(".box1_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box2_1").style.background = "url(fox.jpg)"
+				document.querySelector(".box2_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box3_1").style.background = "url(mpanda.jpg)"
+				document.querySelector(".box3_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box4_1").style.background = "url(kvokka.jpg)"
+				document.querySelector(".box4_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box5_1").style.background = "url(kukabar.png)"
+				document.querySelector(".box5_1").style.backgroundSize = "100% 100%"
+				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
+				document.querySelector(".box0_1").style.background = "none"
+				document.querySelector(".box1_1").style.background = "none"
+				document.querySelector(".box2_1").style.background = "none"
+				document.querySelector(".box3_1").style.background = "none"
+				document.querySelector(".box4_1").style.background = "none"
+				document.querySelector(".box5_1").style.background = "none"
+			}
+		}
+
+		document.querySelector(".box1_1").onclick = function(){
+			document.querySelector(".box1_1").style.background = "url(fennec.jpg)"
+			document.querySelector(".box1_1").style.backgroundSize = "100% 100%"
+			popitki = popitki - 1;
+			document.querySelector(".popitki").innerHTML = popitki;
+			if(popitki > 0){
+				alert("Неверно! Попрощайся с попыткой.")
+			}
+			if(popitki == 0){
+				document.querySelector(".box0_1").style.background = "url(dolgopyat.jpg)"
+				document.querySelector(".box0_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box1_1").style.background = "url(fennec.jpg)"
+				document.querySelector(".box1_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box2_1").style.background = "url(fox.jpg)"
+				document.querySelector(".box2_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box3_1").style.background = "url(mpanda.jpg)"
+				document.querySelector(".box3_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box4_1").style.background = "url(kvokka.jpg)"
+				document.querySelector(".box4_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box5_1").style.background = "url(kukabar.png)"
+				document.querySelector(".box5_1").style.backgroundSize = "100% 100%"
+				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
+				document.querySelector(".box0_1").style.background = "none"
+				document.querySelector(".box1_1").style.background = "none"
+				document.querySelector(".box2_1").style.background = "none"
+				document.querySelector(".box3_1").style.background = "none"
+				document.querySelector(".box4_1").style.background = "none"
+				document.querySelector(".box5_1").style.background = "none"
+			}
+		}
+
+		document.querySelector(".box2_1").onclick = function(){
+			document.querySelector(".box2_1").style.background = "url(fox.jpg)"
+			document.querySelector(".box2_1").style.backgroundSize = "100% 100%"
+			popitki = popitki - 1;
+			document.querySelector(".popitki").innerHTML = popitki;
+			if(popitki > 0){
+				alert("Неверно! Попрощайся с попыткой.")
+			}
+			if(popitki == 0){
+				document.querySelector(".box0_1").style.background = "url(dolgopyat.jpg)"
+				document.querySelector(".box0_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box1_1").style.background = "url(fennec.jpg)"
+				document.querySelector(".box1_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box2_1").style.background = "url(fox.jpg)"
+				document.querySelector(".box2_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box3_1").style.background = "url(mpanda.jpg)"
+				document.querySelector(".box3_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box4_1").style.background = "url(kvokka.jpg)"
+				document.querySelector(".box4_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box5_1").style.background = "url(kukabar.png)"
+				document.querySelector(".box5_1").style.backgroundSize = "100% 100%"
+				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
+				document.querySelector(".box0_1").style.background = "none"
+				document.querySelector(".box1_1").style.background = "none"
+				document.querySelector(".box2_1").style.background = "none"
+				document.querySelector(".box3_1").style.background = "none"
+				document.querySelector(".box4_1").style.background = "none"
+				document.querySelector(".box5_1").style.background = "none"
+			}
+		}
+
+		document.querySelector(".box3_1").onclick = function(){
+			document.querySelector(".box3_1").style.background = "url(mpanda.jpg)"
+			document.querySelector(".box3_1").style.backgroundSize = "100% 100%"
+			popitki = popitki - 1;
+			document.querySelector(".popitki").innerHTML = popitki;
+			if(popitki > 0){
+				alert("Неверно! Попрощайся с попыткой.")
+			}
+			if(popitki == 0){
+				document.querySelector(".box0_1").style.background = "url(dolgopyat.jpg)"
+				document.querySelector(".box0_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box1_1").style.background = "url(fennec.jpg)"
+				document.querySelector(".box1_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box2_1").style.background = "url(fox.jpg)"
+				document.querySelector(".box2_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box3_1").style.background = "url(mpanda.jpg)"
+				document.querySelector(".box3_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box4_1").style.background = "url(kvokka.jpg)"
+				document.querySelector(".box4_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box5_1").style.background = "url(kukabar.png)"
+				document.querySelector(".box5_1").style.backgroundSize = "100% 100%"
+				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
+				document.querySelector(".box0_1").style.background = "none"
+				document.querySelector(".box1_1").style.background = "none"
+				document.querySelector(".box2_1").style.background = "none"
+				document.querySelector(".box3_1").style.background = "none"
+				document.querySelector(".box4_1").style.background = "none"
+				document.querySelector(".box5_1").style.background = "none"
+			}
+		}
+
+		document.querySelector(".box4_1").onclick = function(){
+			document.querySelector(".box4_1").style.background = "url(kvokka.jpg)"
+			document.querySelector(".box4_1").style.backgroundSize = "100% 100%"
+			popitki = popitki - 1;
+			document.querySelector(".popitki").innerHTML = popitki;
+			if(popitki > 0){
+				alert("Неверно! Попрощайся с попыткой.")
+			}
+			if(popitki == 0){
+				document.querySelector(".box0_1").style.background = "url(dolgopyat.jpg)"
+				document.querySelector(".box0_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box1_1").style.background = "url(fennec.jpg)"
+				document.querySelector(".box1_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box2_1").style.background = "url(fox.jpg)"
+				document.querySelector(".box2_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box3_1").style.background = "url(mpanda.jpg)"
+				document.querySelector(".box3_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box4_1").style.background = "url(kvokka.jpg)"
+				document.querySelector(".box4_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box5_1").style.background = "url(kukabar.png)"
+				document.querySelector(".box5_1").style.backgroundSize = "100% 100%"
+				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
+				document.querySelector(".box0_1").style.background = "none"
+				document.querySelector(".box1_1").style.background = "none"
+				document.querySelector(".box2_1").style.background = "none"
+				document.querySelector(".box3_1").style.background = "none"
+				document.querySelector(".box4_1").style.background = "none"
+				document.querySelector(".box5_1").style.background = "none"
+			}
+		}
+
+		document.querySelector(".box1_1").onclick = function(){
+			document.querySelector(".box1_1").style.background = "url(fennec.jpg)"
+			document.querySelector(".box1_1").style.backgroundSize = "100% 100%"
+			popitki = popitki - 1;
+			document.querySelector(".popitki").innerHTML = popitki;
+			if(popitki > 0){
+				alert("Неверно! Попрощайся с попыткой.")
+			}
+			if(popitki == 0){
+				document.querySelector(".box0_1").style.background = "url(dolgopyat.jpg)"
+				document.querySelector(".box0_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box1_1").style.background = "url(fennec.jpg)"
+				document.querySelector(".box1_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box2_1").style.background = "url(fox.jpg)"
+				document.querySelector(".box2_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box3_1").style.background = "url(mpanda.jpg)"
+				document.querySelector(".box3_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box4_1").style.background = "url(kvokka.jpg)"
+				document.querySelector(".box4_1").style.backgroundSize = "100% 100%"
+				document.querySelector(".box5_1").style.background = "url(kukabar.png)"
+				document.querySelector(".box5_1").style.backgroundSize = "100% 100%"
+				alert("Ты проиграл! Перезагрузи страницу чтобы попробывать снова.")
+				document.querySelector(".box0_1").style.background = "none"
+				document.querySelector(".box1_1").style.background = "none"
+				document.querySelector(".box2_1").style.background = "none"
+				document.querySelector(".box3_1").style.background = "none"
+				document.querySelector(".box4_1").style.background = "none"
+				document.querySelector(".box5_1").style.background = "none"
+			}
+		}
+
+		document.querySelector(".box5_1").onclick = function(){
+			document.querySelector(".box5_1").style.background = "url(kukabar.png)"
+			document.querySelector(".box5_1").style.backgroundSize = "100% 100%"
+			popitki = 2020;
+			document.querySelector(".popitki").innerHTML = popitki;
+			alert("Ты прошел угадайку, МОЛОДЕЦ!")
+			document.querySelector(".box0_1").style.background = "url(dolgopyat.jpg)"
+			document.querySelector(".box0_1").style.backgroundSize = "100% 100%"
+			document.querySelector(".box1_1").style.background = "url(fennec.jpg)"
+			document.querySelector(".box1_1").style.backgroundSize = "100% 100%"
+			document.querySelector(".box2_1").style.background = "url(fox.jpg)"
+			document.querySelector(".box2_1").style.backgroundSize = "100% 100%"
+			document.querySelector(".box3_1").style.background = "url(mpanda.jpg)"
+			document.querySelector(".box3_1").style.backgroundSize = "100% 100%"
+			document.querySelector(".box4_1").style.background = "url(kvokka.jpg)"
+			document.querySelector(".box4_1").style.backgroundSize = "100% 100%"
+			document.querySelector(".box5_1").style.background = "url(kukabar.png)"
+			document.querySelector(".box5_1").style.backgroundSize = "100% 100%"
+			document.querySelector(".inst").style.display = "block"
+			document.querySelector(".inst").style.marginLeft = "47%"
+			document.querySelector(".h_2").style.display = "none"
+			document.querySelector(".h_3").style.display = "block"
+
+
+		}
+			
+	</script>
+
+</body>
+</html>
